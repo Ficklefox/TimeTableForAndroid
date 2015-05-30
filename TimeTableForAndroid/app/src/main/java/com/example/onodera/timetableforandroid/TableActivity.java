@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 
 
 public class TableActivity extends ActionBarActivity {
@@ -12,6 +13,10 @@ public class TableActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
+
+        //gridviewに対する紐づけ
+        GridView gridView = (GridView)findViewById(R.id.gridView);
+        gridView.setAdapter(new TableAdapter(this));
     }
 
 
