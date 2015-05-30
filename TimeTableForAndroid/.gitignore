@@ -4,3 +4,22 @@
 /.idea/libraries
 .DS_Store
 /build
+
+#　2015/05/30追加
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+local.properties
+.classpath
+.project
+proguard/
+*.iml
+*.ipr
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/libraries/
+app/build/
