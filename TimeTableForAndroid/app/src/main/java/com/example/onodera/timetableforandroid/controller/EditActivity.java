@@ -1,9 +1,11 @@
-package com.example.onodera.timetableforandroid;
+package com.example.onodera.timetableforandroid.controller;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.onodera.timetableforandroid.R;
 
 
 public class EditActivity extends ActionBarActivity {

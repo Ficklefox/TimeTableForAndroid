@@ -1,4 +1,4 @@
-package com.example.onodera.timetableforandroid;
+package com.example.onodera.timetableforandroid.views;
 
 /**
  * Created by Onodera on 2015/06/13.

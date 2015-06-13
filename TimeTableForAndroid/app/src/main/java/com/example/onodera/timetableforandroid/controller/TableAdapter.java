@@ -1,4 +1,4 @@
-package com.example.onodera.timetableforandroid;
+package com.example.onodera.timetableforandroid.controller;
 
 /**
  * Created by Onodera on 2015/05/30.
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.onodera.timetableforandroid.R;
 
 public class TableAdapter extends BaseAdapter{
 

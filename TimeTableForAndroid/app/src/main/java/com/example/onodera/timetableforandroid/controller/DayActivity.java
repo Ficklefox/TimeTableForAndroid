@@ -1,29 +1,26 @@
-package com.example.onodera.timetableforandroid;
+package com.example.onodera.timetableforandroid.controller;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.GridView;
+
+import com.example.onodera.timetableforandroid.R;
 
 
-public class TableActivity extends ActionBarActivity {
+public class DayActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_table);
-
-        //gridviewに対する紐づけ
-        ExpandableHeightGridView gridView = (ExpandableHeightGridView)findViewById(R.id.gridView);
-        gridView.setAdapter(new TableAdapter(this));
+        setContentView(R.layout.activity_day);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_table, menu);
+        getMenuInflater().inflate(R.menu.menu_day, menu);
         return true;
     }
 
