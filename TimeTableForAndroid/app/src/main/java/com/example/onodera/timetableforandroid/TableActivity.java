@@ -15,7 +15,7 @@ public class TableActivity extends ActionBarActivity {
         setContentView(R.layout.activity_table);
 
         //gridviewに対する紐づけ
-        GridView gridView = (GridView)findViewById(R.id.gridView);
+        ExpandableHeightGridView gridView = (ExpandableHeightGridView)findViewById(R.id.gridView);
         gridView.setAdapter(new TableAdapter(this));
     }
 
