@@ -5,11 +5,19 @@ package com.example.onodera.timetableforandroid.model;
  */
 public class TableDataManager {
 
-    private static  TableData[] TableData;
-    public static void lordData(){
+    private TableDataManager(){
+        lordData();
+    }
+    private TableData[][] _tableData;
+    private static TableDataManager _instance;
+    public static TableDataManager getInstance(){
+        if(_instance != null)return _instance;
+        else return _instance = new TableDataManager();
+    }
+    public void lordData(){
 
     }
-    public static void saveData(){
+    public void saveData(){
 
     }
 }
