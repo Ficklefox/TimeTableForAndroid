@@ -20,13 +20,14 @@ public class TableActivity extends ActionBarActivity {
         setContentView(R.layout.activity_table);
 
 
-        //gridviewに対する紐づけ
+        //gridViewに対する紐づけ
         ExpandableHeightGridView gridView = (ExpandableHeightGridView)findViewById(R.id.gridView);
         gridView.setAdapter(new TableAdapter(this));
         final Intent intent = new Intent(this,EditActivity.class);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                intent.putExtra("KEY",position);
                 startActivity(intent);
             }
         });

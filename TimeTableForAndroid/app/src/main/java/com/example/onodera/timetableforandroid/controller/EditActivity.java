@@ -1,9 +1,14 @@
 package com.example.onodera.timetableforandroid.controller;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.example.onodera.timetableforandroid.R;
 
@@ -14,6 +19,18 @@ public class EditActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
+        Intent intent = getIntent();
+        String[] value = new String[]{intent.getStringExtra("KEY")};
+
+        LinearLayout linearLayout = new LinearLayout(this);
+        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+        setContentView(linearLayout);
+
+        ListView list = new ListView(this);
+        linearLayout.addView(list,new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_edit,value);
+        list.setAdapter(arrayAdapter);
     }
 
 
