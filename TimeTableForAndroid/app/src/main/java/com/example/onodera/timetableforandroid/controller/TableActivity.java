@@ -1,9 +1,12 @@
 package com.example.onodera.timetableforandroid.controller;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 
 import com.example.onodera.timetableforandroid.R;
 import com.example.onodera.timetableforandroid.views.ExpandableHeightGridView;
@@ -16,9 +19,19 @@ public class TableActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
 
+
         //gridviewに対する紐づけ
         ExpandableHeightGridView gridView = (ExpandableHeightGridView)findViewById(R.id.gridView);
         gridView.setAdapter(new TableAdapter(this));
+        final Intent intent = new Intent(this,EditActivity.class);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
